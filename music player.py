@@ -3,11 +3,16 @@ from tkinter import *
 from tkinter import filedialog
 from pygame import *
 import os
+import playsound
+import webbrowser
+from pygame import mixer
+
+
 root= Tk()
 root.title("mp3 재생 프로그램")
 root.geometry("500x600+500+40")
 root.resizable(False,False)
-from playsound import playsound
+
 
 
 filename=0
@@ -33,9 +38,11 @@ def openfile():
         title="open file", 
         filetypes=(("mp3 files", "*.mp3"), ("all files", "*.*"))
     )
+    print(filename)
+    webbrowser.open("Photograph.mp3")
 
 def play_sound():
-    playsound("Photograph.mp3")
+    webbrowser.open("Photograph.mp3")
 
 
     
